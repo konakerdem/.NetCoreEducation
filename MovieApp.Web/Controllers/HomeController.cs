@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MovieApp.Web.Models;
 
 namespace MovieApp.Web.Controllers
 {
@@ -10,8 +11,38 @@ namespace MovieApp.Web.Controllers
 
         //Home altında Action methodunun adı neyse (Index) o isimde view arar
         public IActionResult Index()
-        {
-            return View(); //döndürülecek view i tanımlamamız gerekiyor
+        {   //döndüreceğim view bilgilerini buradan gönderiyorum.
+
+            string filmBasligi = "Film Başlığı";
+            string filmAciklama = "Filmin Açıklaması";
+            string filmYonetmen = "Filmin Yönetmeni";
+            string[] oyuncular = {"oyuncu1", "oyuncu2"};
+
+            //viewbag veya model ile bu bilgiler gönderilebilir 
+
+            /*ViewBag
+            ViewBag.FilmBasligi=filmBasligi; // çanta ile değişkeni taşıyorum.
+            ViewBag.FilmAciklamasi=filmAciklama;
+            ViewBag.FilmYonetmeni = filmYonetmen;
+            ViewBag.Oyuncular=oyuncular;
+            */
+
+
+
+            //MVC ye göre yaptığımızda Modelleyip göndermemiz lazım
+            var m = new Movie(); //model classımızdan nesne oluşturduk 
+            m.Title = filmBasligi;
+            m.Description = filmAciklama;
+            m.Director = filmYonetmen;
+            m.Players = oyuncular;
+
+
+
+
+
+            return View(m); 
+            //döndürülecek view i tanımlamamız gerekiyor
+            // değişken verilerimi parametre olarak gönderdim gibi düşünebiliriz
         }
 
 
