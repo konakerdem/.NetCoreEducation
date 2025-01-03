@@ -44,9 +44,29 @@ namespace MovieApp.Web.Controllers
             // eskiden movie tipinde nesne oluşturup değiken tanımlıyordum.
             var filmListesi = new List<Movie>()
             {
-                new Movie{Title="film 1 ",Description="Açıklama 1",Director="Yönetmen 1",Players=new string[]{"oyuncu1","oyuncu2"}},
-                new Movie{Title="film 2 ",Description="Açıklama 2",Director="Yönetmen 2",Players=new string[]{"oyuncu1","oyuncu2"}},
-                new Movie{Title="film 3 ",Description="Açıklama 3",Director="Yönetmen 3",Players=new string[]{"oyuncu1","oyuncu2"}}
+                new Movie{
+                    Title="film 1 ",
+                    Description="Açıklama 1",
+                    Director="Yönetmen 1",
+                    Players=new string[]{"oyuncu1","oyuncu2"},
+                    ImageUrl="1.jpg"
+                },
+
+                new Movie{
+                    Title="film 2 ",
+                    Description="Açıklama 2",
+                    Director="Yönetmen 2",
+                    Players=new string[]{"oyuncu1","oyuncu2"},
+                    ImageUrl="2.jpg"
+                },
+     
+                new Movie{
+                    Title="film 3 ",
+                    Description="Açıklama 3",
+                    Director="Yönetmen 3",
+                    Players=new string[]{"oyuncu1","oyuncu2"},
+                    ImageUrl="1.jpg"
+                }
 
 
             };

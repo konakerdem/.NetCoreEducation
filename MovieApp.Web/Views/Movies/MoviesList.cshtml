@@ -7,28 +7,10 @@
 @model List<Movie>     //ben model olarak bir Liste kullanacağım bu listenin tipi de ...... tam uzantısnı yazıyoruz.
 
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title>movies/list</title>
 
-   <style>
-       .film{
-           border:1px solid #000000;
-           margin-bottom:10px;
-           padding:10px
-       }
+        <!--navbar layout-->
 
-
-   </style>
-
-
-
-
-</head>
-    <body>
-
-
-    <h1>Film Listesi</h1>
+    <h1>Film Listesi</h1> 
 
     <div id="filmler">
 
@@ -36,7 +18,7 @@
         @foreach (var movie in Model) //modelim benim liste listemin her bir elemanı movie
         {
             <div class=" film">
-
+                <img src="/img/@movie.ImageUrl" alt="@movie.Title"> <!--fotoğraf kullanımında koruma oluyor startup.cs den middleware yazıyoruz.-->
                 <p> @movie.Title</p>
                 <p> @movie.Description</p>
                 <p> @movie.Director</p>
@@ -64,9 +46,3 @@
 
 
 
-
-
-
-
-    </body>
-</html>

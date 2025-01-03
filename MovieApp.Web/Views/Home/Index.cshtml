@@ -1,28 +1,11 @@
 ﻿<!-- MovieApp.Web.Models.Movie yazmıyorum ViewImports sayesinde-->
 @model Movie ; 
+@{
+    Layout = "_Layout2"; //ViewStarttaki layout değil bu çalışacak
+}
 <!--model olarak şunu kullanıyorum diyorum-->
 
-
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-
-        <title>Home/Index</title>
-        <style>
-        .film {
-            border: 1px solid #000000;
-            margin-bottom: 10px;
-            padding: 10px
-        }
-        </style>
-    </head>
-    <body>
-
-        <!--Home/Index-->
-
        <h1>Film Listesi</h1>
-
-       <!--all films-->
        <div id="filmler">
 
            <div class=" film">
@@ -31,9 +14,7 @@
                <p> @Model.Title</p>
                <p> @Model.Description</p>
                <p> @Model.Director</p>
-               
 
-               <!--oyuncular-->
                <p> 
                    <ul>
                        @foreach (var player in Model.Players)
@@ -43,23 +24,8 @@
                     }
                    </ul>
                </p>
-
-
            </div>
-
-
-
 
        </div>
 
         
-
-
-
-
-
-
-
-
-    </body>
-</html>
